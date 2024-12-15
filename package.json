@@ -1,0 +1,31 @@
+{
+  "name": "consts",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./time": "./dist/time.mjs"
+  },
+  "scripts": {
+    "bundle": "npx rollup src/time.mjs --file dist/time.js --format iife",
+    "cc": "npx c8 npm test",
+    "clean": "npx rimraf -v --glob dist",
+    "lint": "npx eslint .",
+    "prepare": "husky",
+    "test": "node test/index.mjs",
+    "test:dev": "nodemon test/index.mjs"
+  },
+  "author": "Kuron",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.9",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.28.1",
+    "semantic-release": "^22.0.12"
+  }
+}
