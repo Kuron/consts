@@ -45,7 +45,7 @@ Object.defineProperties(converters.prototype, {
   up: { get() { this.math = (this.math === 'round' && 'ceil') || null; return this; } },
 });
 
-const parser = function (value) { this.value = value; };
+const normalizer = function (value) { this.value = value; };
 
 Object.keys(TIME)
   .reduce((a, key) => {
@@ -53,7 +53,7 @@ Object.keys(TIME)
       get() { return { to: new converters(this.value * TIME[key]) }; },
     });
     return a;
-  }, parser.prototype);
+  }, normalizer.prototype);
 
-export const from = value => new parser(value);
+export const from = value => new normalizer(value);
 
