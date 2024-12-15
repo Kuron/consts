@@ -7,7 +7,7 @@
     "access": "public"
   },
   "exports": {
-    "./time": "./dist/time.mjs"
+    "./time": "./dist/time.js"
   },
   "scripts": {
     "bundle": "npx rollup src/time.mjs --file dist/time.js --format iife",
