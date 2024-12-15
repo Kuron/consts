@@ -7,10 +7,13 @@
     "access": "public"
   },
   "exports": {
-    "./time": "./dist/time.mjs"
+    "./time": {
+      "require": "./dist/time.cjs",
+      "import": "./dist/time.mjs"
+    }
   },
   "scripts": {
-    "bundle": "npx rollup src/time.mjs --file dist/time.mjs --format es",
+    "bundle": "npx rollup --config rollup.config.mjs",
     "cc": "npx c8 npm test",
     "clean": "npx rimraf -v --glob dist",
     "lint": "npx eslint .",
