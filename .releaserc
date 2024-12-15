@@ -1,1 +1,7 @@
-{ "branches": ["release"], "repositoryUrl": "null" }
+{
+  "branches": [
+    { "name": "main", "channel": "next", "prerelease": "alpha" },
+    { "name": "release" }
+  ],
+  "repositoryUrl": "git@github.com:Kuron/consts.git"
+}
