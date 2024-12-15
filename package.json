@@ -1,7 +1,8 @@
 {
   "name": "consts",
   "version": "1.0.0",
-  "description": "",
+  "url": "https://github.com/Kuron/consts.git",
+  "description": "A collection of constants",
   "exports": {
     "./time": "./dist/time.mjs"
   },
