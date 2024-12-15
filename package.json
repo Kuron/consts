@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "url": "https://github.com/Kuron/consts.git",
   "description": "A collection of constants",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     "./time": "./dist/time.mjs"
   },
